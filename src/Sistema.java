@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
 
 import model.Lote;
 import model.Produto;
@@ -14,13 +15,13 @@ public class Sistema {
 	private static LoteRepository loteRepository;
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ExecutionException {
 		Date date = new Date();
 		
-		Produto produto01 = new Produto("Ovo","GranjaLacerda", 10);
-		Produto produto02 = new Produto("leite em pó","Fazenda Feliz", 8);
-		Produto produto03 = new Produto("pasta de dente","colgate",10);
-		Produto produto04 = new Produto("pão","solar",5);
+		Produto produto01 = new Produto("Ovo","GranjaLacerda", 10.00);
+		Produto produto02 = new Produto("leite em pó","Fazenda Feliz", 8.00);
+		Produto produto03 = new Produto("pasta de dente","colgate",10.00);
+		Produto produto04 = new Produto("pão","solar",5.00);
 
 		produtoRepository.addProduto(produto01);
 		produtoRepository.addProduto(produto02);

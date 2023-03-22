@@ -9,7 +9,7 @@ public class Lote {
 	
 	private Produto produto;
 	
-	private int quantidade; 
+	private double quantidade; 
 	
 	private Date dataFabricacao;
 	
@@ -31,7 +31,7 @@ public class Lote {
 		return produto;
 	}
 
-	public int getQuantidade() {
+	public double getQuantidade() {
 		return quantidade;
 	}
 
@@ -47,8 +47,8 @@ public class Lote {
 		this.produto = produto;
 	}
 
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	public void setQuantidade(double d) {
+		this.quantidade = d;
 	}
 
 	public void setDataFabricacao(Date dataFabricacao) {

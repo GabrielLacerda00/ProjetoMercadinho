@@ -24,7 +24,7 @@ public class LoteService {
 		private ProdutoRepository produtoRep;
 
 		private Lote lote;
-		private int quantidadeDeProdutoEmLote;
+		private double quantidadeDeProdutoEmLote;
 		private Produto produto;
 
 
@@ -69,7 +69,7 @@ public class LoteService {
 			return lote.getId();
 		}
 
-		public int pegaQuantidadeDoProdutoEmLote(Produto produto){
+		public double pegaQuantidadeDoProdutoEmLote(Produto produto){
 			for (Lote lote : this.loteRep.getAll()) {
 				Produto produtoEmLote = lote.getProduto();
 				if (produtoEmLote.equals(produto)) {
@@ -101,7 +101,7 @@ public class LoteService {
 		public void alteraQuantidadeProdutoEmLote(String id,int quantidade){
 			for (Lote lote : this.loteRep.getAll()) {
 				String produtoId = lote.getProduto().getId();
-				int produtoQuantidade = lote.getQuantidade();
+				double produtoQuantidade = lote.getQuantidade();
 				if (produtoId.equals(id)){
 					lote.setQuantidade(produtoQuantidade - quantidade);
 				}
@@ -111,7 +111,7 @@ public class LoteService {
 		public void alteraQuantidadProdutoEmLote(String id,int quantidade){
 			for (Lote lote : this.loteRep.getAll()) {
 				String produtoId = lote.getProduto().getId();
-				int produtoQuantidade = lote.getQuantidade();
+				double produtoQuantidade = lote.getQuantidade();
 				if (produtoId.equals(id)){
 					lote.setQuantidade(produtoQuantidade + quantidade);
 				}
