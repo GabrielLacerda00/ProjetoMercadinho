@@ -1,25 +1,51 @@
+import java.util.Date;
+
 import model.Lote;
 import model.Produto;
+import repository.LoteRepository;
 import repository.ProdutoRepository;
 
 public class Sistema {
 
+	
+	private static ProdutoRepository produtoRepository;
+
+	
+	private static LoteRepository loteRepository;
+
+
 	public static void main(String[] args) {
+		Date date = new Date();
 		
-		Produto produto = new Produto("Leite", "Parmalat");
-		Produto produto02 = new Produto("Frango", "GranjaFeliz");
-		Produto produto03 = new Produto("Carne","Frigorifico");
-		Lote lote = new Lote(produto, 10L);
+		Produto produto01 = new Produto("Ovo","GranjaLacerda", 10);
+		Produto produto02 = new Produto("leite em pó","Fazenda Feliz", 8);
+		Produto produto03 = new Produto("pasta de dente","colgate",10);
+		Produto produto04 = new Produto("pão","solar",5);
+
+		produtoRepository.addProduto(produto01);
+		produtoRepository.addProduto(produto02);
+		produtoRepository.addProduto(produto03);
+		produtoRepository.addProduto(produto04);
+
+
+		Lote lote01 = new Lote(produto01, 50,date);
+		Lote lote02 = new Lote(produto02,12,date);
+		Lote lote03 = new Lote(produto03, 8,date);
+		Lote lote04 = new Lote(produto04, 17,date);
+
+		loteRepository.addLote(lote01);
+		loteRepository.addLote(lote02);
+		loteRepository.addLote(lote03);
+		loteRepository.addLote(lote04);
 		
-		ProdutoRepository catalogo = new ProdutoRepository();
+		System.out.println(produto01);
+		System.out.println(produto02);
+		System.out.println(produto03);
+		System.out.println(produto04);
 		
-		catalogo.addProduto(produto);
-		catalogo.addProduto(produto02);
-		catalogo.addProduto(produto03);
-		
-		//catalogo.atualizaCatalogo(produto03, null, null);
-		
-		System.out.println(produto);
-		System.out.println(lote);
+		System.out.println(lote01);
+		System.out.println(lote02);
+		System.out.println(lote03);
+		System.out.println(lote04);
 	}
 }
