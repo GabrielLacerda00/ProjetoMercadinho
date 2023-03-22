@@ -1,9 +1,9 @@
-package Repository;
+package repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import Model.Lote;
+import model.Lote;
 
 import java.util.List;
 

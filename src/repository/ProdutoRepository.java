@@ -1,10 +1,10 @@
-package Repository;
+package repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import Model.Produto;
+import model.Produto;
 
 public class ProdutoRepository {
 	

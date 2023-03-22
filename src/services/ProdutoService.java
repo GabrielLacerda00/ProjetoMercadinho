@@ -1,13 +1,15 @@
-package Services;
+package services;
 
 
-import Repository.ProdutoRepository;
-import Repository.LoteRepository;
-import DTO.ProdutoDTO;
-import Model.Lote;
-import Model.Produto;
+import model.Lote;
+import model.Produto;
+import repository.LoteRepository;
+import repository.ProdutoRepository;
 
 import java.util.List;
+
+import dto.ProdutoDTO;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
