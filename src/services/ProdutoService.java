@@ -9,6 +9,7 @@ import repository.ProdutoRepository;
 import java.util.List;
 
 import dto.ProdutoDTO;
+import exception.ProductNotFoundException;
 
 import java.util.ArrayList;
 import java.util.Collection;

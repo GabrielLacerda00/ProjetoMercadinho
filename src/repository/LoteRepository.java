@@ -1,45 +1,42 @@
 package repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 import model.Lote;
+import model.Produto;
 
 import java.util.List;
 
+
+
 public class LoteRepository {
 
-    Map<String,Lote> catalogo = new HashMap<String, Lote>();
-
-    public String adicionarLote(Lote lote) {
-        catalogo.put(lote.getId(), lote);
-        return lote.getId();
-    }
-
-    public void atualizaLote(String id, long quantidade) {
-        Lote lote = pegaLote(id);
-        lote.setQuantidade(quantidade);
-    }
-
-    public void removeLote(String id) {
-        catalogo.remove(id);
-    }
-
-    public Lote pegaLote(String id) {
-        return catalogo.get(id);
-    }
-
-    public List<Lote> listaDeLotes() {
-        List<Lote> listDeLotes = new List<Lote>();
-        for (Lote lot: catalogo.values()) {
-            listDeLotes.add(lot);
-        }
-        return listDeLotes;
-    }
-
-	public Lote[] getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	int quantidadeDeProdutoEmLote;
+	Produto produto;
+	
+	private Map<String, Lote> lotes = new HashMap<String, Lote>();
+	
+	public Collection<Lote> getAll() {
+		return this.lotes.values();
+	}
+	
+	public Lote getLote(String id) {
+		return this.lotes.get(id);
+	}
+	
+	public Lote delLot(String id) {
+		return this.lotes.remove(id);
+	}
+	
+	public void editLote(Lote lote) {
+		this.lotes.replace(lote.getId(), lote);
+	}
+	
+	public String addLote(Lote lote) {
+		this.lotes.put(lote.getId(), lote);
+		return lote.getId();
 	}
 
 
