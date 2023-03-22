@@ -1,6 +1,6 @@
+import Model.Lote;
+import Model.Produto;
 import Repository.ProdutoRepository;
-import exemplo.Lote;
-import exemplo.Produto;
 
 public class Sistema {
 

@@ -1,6 +1,6 @@
 package Services;
 
-import exemplo.Lote;
+import Model.Lote;
 import Repository.LoteRepository;
 
 public class LoteService {

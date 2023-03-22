@@ -2,9 +2,10 @@ package Repository;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
 
-import exemplo.Lote;
+import Model.Lote;
+
+import java.util.List;
 
 public class LoteRepository {
 
