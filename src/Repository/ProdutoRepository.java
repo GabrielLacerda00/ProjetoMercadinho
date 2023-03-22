@@ -1,5 +1,6 @@
 package Repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,8 +10,9 @@ public class ProdutoRepository {
 	
    Map<String,Produto> catalogo = new HashMap<String, Produto>();
    
-   public void addProduto(Produto produto) {
+   public String addProduto(Produto produto) {
 	   catalogo.put(produto.getId(), produto);
+	   return produto.getId();
    }
    
    public void atualizaCatalogo(String nome, String novoNome, String novoFabricante) {
@@ -28,6 +30,9 @@ public class ProdutoRepository {
 	   
    }
    
+   public Collection<Produto> getAll() {
+		return catalogo.values();
+	}
    
 
 }
