@@ -1,20 +1,20 @@
 package model;
+
 import java.util.Date;
 import java.util.UUID;
 
-
 public class Lote {
-	
+
 	private String id;
-	
+
 	private Produto produto;
-	
-	private double quantidade; 
-	
+
+	private double quantidade;
+
 	private Date dataFabricacao;
-	
-	private Date dataValidade; 
-	
+
+	private Date dataValidade;
+
 	public Lote(Produto produto, int quantidade, Date dataValidade) {
 		this.id = UUID.randomUUID().toString();
 		this.produto = produto;
@@ -57,6 +57,10 @@ public class Lote {
 
 	public void setDataValidade(Date dataValidade) {
 		this.dataValidade = dataValidade;
+	}
+
+	public void somaQuantidade(Double quantidade) {
+		Double valor = getQuantidade();
 	}
 
 	public String toString() {
