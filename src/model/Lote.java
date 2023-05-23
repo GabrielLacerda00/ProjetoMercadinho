@@ -63,6 +63,10 @@ public class Lote {
 		Double valor = getQuantidade();
 	}
 
+	public void printLote(String lote) {
+		System.out.println(lote);
+	}
+
 	public String toString() {
 		return "Lote ID: " + getId() + " - Produto: " + getProduto().getNome() + " - " + getQuantidade() + " itens";
 	}
